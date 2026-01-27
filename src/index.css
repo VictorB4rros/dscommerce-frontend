@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 :root {
     --dsc-color-bg-primary: #E8E8E8;
     --dsc-color-bg-secondary: #FFE500;
@@ -81,11 +83,6 @@ header {
     display: flex;
     align-items: center;
     padding: 0 20px;
-}
-
-.dsc-header-client {
-    background-color: var(--dsc-color-bg-secondary);
-    color: var(--dsc-color-font-primary);
 }
 
 .dsc-header-admin {
