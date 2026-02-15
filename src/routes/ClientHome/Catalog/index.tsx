@@ -16,8 +16,8 @@ export default function Catalog() {
                             product => <CatalogCard key={product.id} product={product} />
                         )
                     }
-
                 </div>
+                
                 <ButtonNextPage />
             </section>
         </main>
