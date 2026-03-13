@@ -17,12 +17,6 @@ export default function Catalog() {
     }
 
     useEffect(() => {
-
-        //localStorage.setItem("minhaCategoria", JSON.stringify(objTest));
-
-        const obj = JSON.parse(localStorage.getItem("minhaCategoria") || "{}");
-        console.log(obj.name);
-
         productService.findAll()
             .then(response => {
                 setProducts(response.data.content);
