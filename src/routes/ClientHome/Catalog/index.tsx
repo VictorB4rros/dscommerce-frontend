@@ -6,21 +6,29 @@ import ButtonNextPage from '../../../components/ButtonNextPage';
 import type { ProductDTO } from '../../../models/product';
 import { useEffect, useState } from 'react';
 
+type QueryParams = {
+    page: number;
+    name: string;
+}
+
 export default function Catalog() {
 
     const [products, setProducts] = useState<ProductDTO[]>([]);
 
-    const [productName, setProductName] = useState("");
+    const [queryParams, setQueryParams] = useState<QueryParams>({
+        page: 0,
+        name: ""
+    });
 
     useEffect(() => {
-        productService.findPageRequest(0, productName)
+        productService.findPageRequest(queryParams.page, queryParams.name)
             .then(response => {
                 setProducts(response.data.content);
             });
-    }, [productName]);
+    }, [queryParams]);
 
     function handleSearch(searchText: string) {
-        setProductName(searchText);
+        setQueryParams({...queryParams, name: searchText});
     }
 
     return (
