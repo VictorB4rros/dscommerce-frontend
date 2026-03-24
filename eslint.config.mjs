@@ -15,6 +15,8 @@ export default [
     },
     plugins: { '@typescript-eslint': tsPlugin },
     rules: {
+      '@typescript-eslint/no-unsafe-function-type': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
     },
   },
