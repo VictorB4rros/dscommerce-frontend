@@ -44,6 +44,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react-hooks", "virtual:ca1f9da14e12defe8f532bc9a403cbacfa4cdda2f2bea487c1848c2deb6284b86ed7dc1c6542f47134ceae179ab5262b1875c463ed75c32c3cce02d44d28dd6a#npm:7.0.1"],\
           ["eslint-plugin-react-refresh", "virtual:ca1f9da14e12defe8f532bc9a403cbacfa4cdda2f2bea487c1848c2deb6284b86ed7dc1c6542f47134ceae179ab5262b1875c463ed75c32c3cce02d44d28dd6a#npm:0.4.26"],\
           ["globals", "npm:16.5.0"],\
+          ["history", "npm:5.3.0"],\
           ["qs", "npm:6.11.0"],\
           ["react", "npm:19.2.4"],\
           ["react-dom", "virtual:ca1f9da14e12defe8f532bc9a403cbacfa4cdda2f2bea487c1848c2deb6284b86ed7dc1c6542f47134ceae179ab5262b1875c463ed75c32c3cce02d44d28dd6a#npm:19.2.4"],\
@@ -282,6 +283,15 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@babel/core",\
           "@types/babel__core"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@babel/runtime", [\
+      ["npm:7.29.2", {\
+        "packageLocation": "../../.yarn/berry/cache/@babel-runtime-npm-7.29.2-b49cad1c67-10c0.zip/node_modules/@babel/runtime/",\
+        "packageDependencies": [\
+          ["@babel/runtime", "npm:7.29.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2261,6 +2271,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react-hooks", "virtual:ca1f9da14e12defe8f532bc9a403cbacfa4cdda2f2bea487c1848c2deb6284b86ed7dc1c6542f47134ceae179ab5262b1875c463ed75c32c3cce02d44d28dd6a#npm:7.0.1"],\
           ["eslint-plugin-react-refresh", "virtual:ca1f9da14e12defe8f532bc9a403cbacfa4cdda2f2bea487c1848c2deb6284b86ed7dc1c6542f47134ceae179ab5262b1875c463ed75c32c3cce02d44d28dd6a#npm:0.4.26"],\
           ["globals", "npm:16.5.0"],\
+          ["history", "npm:5.3.0"],\
           ["qs", "npm:6.11.0"],\
           ["react", "npm:19.2.4"],\
           ["react-dom", "virtual:ca1f9da14e12defe8f532bc9a403cbacfa4cdda2f2bea487c1848c2deb6284b86ed7dc1c6542f47134ceae179ab5262b1875c463ed75c32c3cce02d44d28dd6a#npm:19.2.4"],\
@@ -3047,6 +3058,16 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["hermes-estree", "npm:0.25.1"],\
           ["hermes-parser", "npm:0.25.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["history", [\
+      ["npm:5.3.0", {\
+        "packageLocation": "../../.yarn/berry/cache/history-npm-5.3.0-00136b6a63-10c0.zip/node_modules/history/",\
+        "packageDependencies": [\
+          ["@babel/runtime", "npm:7.29.2"],\
+          ["history", "npm:5.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
