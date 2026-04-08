@@ -1,11 +1,14 @@
 import './styles.css';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import type { CredentialsDTO } from '../../../models/auth';
 import * as authService from '../../../services/auth-service';
 import { useNavigate } from 'react-router-dom';
+import { ContextToken } from '../../../utils/context-token';
 
 
 export default function Login() {
+
+    const { setContextTokenPayload } = useContext(ContextToken);
 
     const navigate = useNavigate();
 
@@ -14,11 +17,13 @@ export default function Login() {
         password: ''
     });
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function handleSubmit(event: any) {
         event.preventDefault();
         authService.loginRequest(formData)
             .then(response => {
                 authService.saveAccessToken(response.data.access_token);
+                setContextTokenPayload(authService.getAccessTokenPayload());
                 navigate("/cart");
             })
             .catch(error => {
@@ -26,6 +31,7 @@ export default function Login() {
             });
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function handleInputChange(event: any) {
         const value = event.target.value;
         const name = event.target.name;

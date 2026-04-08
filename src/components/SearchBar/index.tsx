@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './styles.css';
 
 type Props = {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     onSearch: Function;
 }
 
@@ -9,11 +10,13 @@ export default function SearchBar({ onSearch }: Props) {
 
     const [text, setText] = useState("");
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function handleSubmit(event: any) {
         event.preventDefault();
         onSearch(text);
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function handleChange(event: any) {
         setText(event.target.value);
     }

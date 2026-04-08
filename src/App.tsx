@@ -23,6 +23,7 @@ export default function App() {
   const [contextTokenPayload, setContextTokenPayload] = useState<AccessTokenPayloadDTO>();
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setContextCartCount(cartService.getCart().items.length);
 
     if (authService.isAuthenticated()) {
