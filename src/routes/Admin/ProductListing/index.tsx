@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import type { ProductDTO } from '../../../models/product';
 import SearchBar from '../../../components/SearchBar';
 import ButtonNextPage from '../../../components/ButtonNextPage';
+import DialogInfo from '../../../components/DialogInfo';
 
 type QueryParams = {
     page: number;
@@ -87,6 +88,8 @@ export default function ProductListing() {
                 }
                 
             </section>
+
+            <DialogInfo />
         </main>
     );
 }
