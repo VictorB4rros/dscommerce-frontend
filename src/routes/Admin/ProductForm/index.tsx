@@ -41,10 +41,6 @@ export default function ProductForm() {
     });
 
     useEffect(() => {
-
-        const result = forms.toDirty(formData, "price");
-        console.log(result);
-
         if (isEditing) {
             productService.findById(Number(params.productId))
                 .then(response => {
@@ -56,15 +52,12 @@ export default function ProductForm() {
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function handleInputChange(event: any) {
-        const value = event.target.value;
-        const name = event.target.name;
-        const updatedData = forms.update(formData, name, value);
-        const validatedData = forms.validate(updatedData, name);
-        setFormData(validatedData);
+        const result = forms.updateAndValidate(formData, event.target.name, event.target.value);
+        setFormData(result);
     }
 
     function handleTurnDirty(name: string) {
-        const newFormData = forms.toDirty(formData, name);
+        const newFormData = forms.dirtyAndValidate(formData, name);
         setFormData(newFormData);
     }
 
