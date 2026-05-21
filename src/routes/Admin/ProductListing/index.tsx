@@ -76,7 +76,7 @@ export default function ProductListing() {
 
     function handleDialogConfirmationAnswerClose(answer: boolean, productId: number) {
         if (answer) {
-            productService.deletById(productId)
+            productService.deleteById(productId)
                 .then(() => {
                     setProducts([]);
                     setQueryParams({ ...queryParams, page: 0 });
