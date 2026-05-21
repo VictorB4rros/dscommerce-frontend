@@ -33,7 +33,7 @@ export default function Login() {
             type: "password",
             placeholder: "Senha",
         }
-    })
+    });
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function handleSubmit(event: any) {
